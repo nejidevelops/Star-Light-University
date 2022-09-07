@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./Home"
 import About from "./About"
 import Students from "./Students"
@@ -7,7 +7,7 @@ import Teachers from "./Teachers"
 import Course from "./Course"
 import ContactUs from "./ContactUs"
 import NavBar from './NavBar';
-import { useState } from 'react';
+import Hero from './Hero';
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
       <Route exact path="/course" element={<Course />} />
       <Route exact path="/contact-us" element={<ContactUs />} />    
     </Switch>
+    <Hero />
     </div>
     </BrowserRouter>
   );

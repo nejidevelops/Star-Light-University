@@ -1,3 +1,8 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
 :root {
     --mainColor: rgb(104, 22, 36);
     --mainColorLight: rgb(216, 151, 162);
@@ -27,4 +32,9 @@
     margin-left: 15px;
     color: var(--secondary-color);
     margin-top: 14px;
+}
+
+.navlinks{
+    margin-right: 4%;
+    margin-top: 1.5%;
 }
