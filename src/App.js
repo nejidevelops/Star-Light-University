@@ -1,24 +1,29 @@
-import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom';
+import Home from "./Home"
+import About from "./About"
+import Students from "./Students"
+import Teachers from "./Teachers"
+import Course from "./Course"
+import ContactUs from "./ContactUs"
+import NavBar from './NavBar';
+
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
   return (
-    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      <div className='container'>
-        <span style={{color: darkMode ? "gray":"yellow"}}>☀︎</span>
-        <div className='switch-checkbox'>
-        <label className='switch'>
-          <input type="checkbox"
-            onChange={()=> setDarkMode(!darkMode)}
-          />
-          <span className='slider round'></span>
-        </label>  
-        </div>      
-        <span style={{color: darkMode ? "#":"gray"}}>☽</span>      
-      </div>
+    <BrowserRouter>
+    <div>
+    <NavBar />
+    <Switch>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/students" element={<Students />} />
+      <Route exact path="/teachers" element={<Teachers />} />
+      <Route exact path="/course" element={<Course />} />
+      <Route exact path="/contact-us" element={<ContactUs />} />    
+    </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 

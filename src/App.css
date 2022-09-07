@@ -1,8 +1,9 @@
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 #root {
   height: 100%;
 }
@@ -101,7 +102,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -111,4 +111,4 @@ input:checked + .slider:before {
 }
 .switch-checkbox {
   padding: 10px
-}
+  }
