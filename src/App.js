@@ -7,6 +7,7 @@ import Teachers from "./Teachers"
 import Course from "./Course"
 import ContactUs from "./ContactUs"
 import NavBar from './NavBar';
+import { useState } from 'react';
 
 
 function App() {
