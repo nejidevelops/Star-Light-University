@@ -5,6 +5,21 @@ function NavBar(){
     return(
         <div class="container-fluid">
             <div className="navbar">
+                <NavLink to ="/">
+
+                </NavLink>
+                <NavLink to ="/">
+
+                </NavLink>
+                <NavLink to ="/">
+
+                </NavLink>
+                <NavLink to ="/">
+
+                </NavLink>
+                <NavLink to ="/">
+
+                </NavLink>
                 
             </div>
         </div>
