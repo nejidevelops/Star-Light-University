@@ -13,11 +13,10 @@ function App() {
           <input type="checkbox"
             onChange={()=> setDarkMode(!darkMode)}
           />
-          <span className='switch round'></span>
+          <span className='slider round'></span>
         </label>  
-        
         </div>      
-        <span style={{color: darkMode ? "yellow":"gray"}}>☽</span>        
+        <span style={{color: darkMode ? "#":"gray"}}>☽</span>      
       </div>
     </div>
   );
