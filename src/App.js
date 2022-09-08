@@ -12,20 +12,18 @@ import Hero from './Hero';
 
 function App() {
   return (
-    <BrowserRouter>
     <div>
-    <NavBar />
-    <Switch>
+   <NavBar />
+     {/*<Switch>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/students" element={<Students />} />
       <Route exact path="/teachers" element={<Teachers />} />
       <Route exact path="/course" element={<Course />} />
       <Route exact path="/contact-us" element={<ContactUs />} />    
-    </Switch>
-    <Hero />
+  </Switch><Hero />*/}
+      <About />
     </div>
-    </BrowserRouter>
   );
 }
 

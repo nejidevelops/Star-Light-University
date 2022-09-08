@@ -1,0 +1,36 @@
+img{
+    width: 50%;
+    height: 70%;
+}
+
+button{
+    margin-top: 20px;
+    width: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+button a{
+    font-size: 20px;
+}
+
+#enr{
+    background-color: #ec4067;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px #ec4067;
+}
+
+#enrl{
+    color: white;
+}
+
+#ex{
+    background-color: white;
+    border: 1px solid #ec4067;
+    margin-left: 20px;
+}
+
+#exp{
+    color: #ec4067;
+}
