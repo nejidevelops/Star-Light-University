@@ -1,5 +1,5 @@
 import React from 'react'
-import './Teacher.css'
+import './Teachers.css'
 
 function Teachers(){
   return (
@@ -41,4 +41,4 @@ function Teachers(){
   )
 }
 
-export default Teachers
+export default Teachers;
