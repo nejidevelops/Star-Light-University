@@ -76,7 +76,7 @@ function CourseApplication({handlePosting}) {
                value={schoolData.course_duration}
               onChange={handleChange}
            ></input>
-          <button className="btn2">Send</button>
+          <button className="btn2" onClick={handleSubmit}>Send</button>
           </form>
         </div>
       </div>
