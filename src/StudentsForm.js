@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import './StudentForm.css'
 
-function Students(){
+function StudentsForm(){
   return (
     <div className="container">
     <div className="contact-box">
@@ -40,4 +41,4 @@ function Students(){
   )
 }
 
-export default Students
+export default StudentsForm;

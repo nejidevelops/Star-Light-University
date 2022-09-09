@@ -3,7 +3,7 @@ import './CourseApplication.css';
 import { useState } from 'react';
 
 function CourseApplication({handlePosting}) {
-  const [courseData, setCourseData] = useState({
+  const [schoolData, setSchoolData] = useState({
     course_name: '',
     fees: '',
     department: '',
@@ -12,19 +12,19 @@ function CourseApplication({handlePosting}) {
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch(`https://group-3-backend-app.herokuapp.com/courses`,{
+    fetch(``,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(courseData)
+        body: JSON.stringify(schoolData)
     })
     .then(r => r.json())
     .then(data => {
         handlePosting(data)
     })
 
-    setCourseData({
+    setSchoolData({
         course_name: '',
         fees: '',
         department: '',
@@ -33,8 +33,8 @@ function CourseApplication({handlePosting}) {
 }
 
   function handleChange(e){
-    setCourseData({
-        ...courseData, [e.target.name]: e.target.value,
+    setSchoolData({
+        ...schoolData, [e.target.name]: e.target.value,
     });
 } 
   return (
@@ -49,7 +49,7 @@ function CourseApplication({handlePosting}) {
               required
               className ="field"
               placeholder='Course Name'
-              value={courseData.course_name}
+              value={schoolData.course_name}
               onChange={handleChange}
             ></input>
             <br />
@@ -58,14 +58,14 @@ function CourseApplication({handlePosting}) {
               required
               className='field'
               placeholder='Fees'
-              value={courseData.fees}
+              value={schoolData.fees}
               onChange={handleChange}
             ></input>
             <input
                type='text'
                placeholder="Department"
                className='field'
-               value={courseData.department}
+               value={schoolData.department}
               onChange={handleChange}
             ></input>
            <input
@@ -73,7 +73,7 @@ function CourseApplication({handlePosting}) {
                required
                className='field'
                placeholder='Course Duration in Months'
-               value={courseData.course_duration}
+               value={schoolData.course_duration}
               onChange={handleChange}
            ></input>
           <button className="btn2">Send</button>
