@@ -22,7 +22,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: url("./images/pexels-filipe-sabino-2065490.jpg") no-repeat center;
+	background: url("./images/pexels-polina-tankilevitch-4443162.jpg") no-repeat center;
 	background-size: cover;
 	filter: blur(50px);
 	z-index: -1;
@@ -39,7 +39,7 @@
 }
 
 .lefty{
-	background: url("./images/pexels-filipe-sabino-2065490.jpg") no-repeat center;
+	background: url("./images/pexels-polina-tankilevitch-4443162.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }

@@ -39,9 +39,9 @@ function handleChange(e){
 }  
 
   return (
-    <div className="container">
+    <div className="container2">
       <div className="contact-box">
-        <div className="left"></div>
+        <div className="lefty"></div>
         <div className="right">
           <h2>Enroll Now</h2>
           <form>

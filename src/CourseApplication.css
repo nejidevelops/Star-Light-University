@@ -5,7 +5,7 @@
 	font-family: 'Quicksand', sans-serif;
 }
 
-.container{
+.container3{
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -15,19 +15,19 @@
 	padding: 20px 100px;
 }
 
-.container:after{
+.container3:after{
 	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: url("./images/pexels-ketut-subiyanto-4126724.jpg") no-repeat center;
+	background: url("./images/pexels-polina-tankilevitch-4443162.jpg") no-repeat center;
 	background-size: cover;
 	filter: blur(50px);
 	z-index: -1;
 }
-.contact-box{
+.contact-box1{
 	max-width: 850px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -38,8 +38,8 @@
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
-.left{
-	background: url("./images/pexels-filipe-sabino-2065490.jpg") no-repeat center;
+.lefti{
+	background: url("./images/pexels-polina-tankilevitch-4443162.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }

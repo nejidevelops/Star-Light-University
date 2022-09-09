@@ -38,9 +38,9 @@ function CourseApplication({handlePosting}) {
     });
 } 
   return (
-    <div className="container">
-      <div className="contact-box">
-        <div className="left"></div>
+    <div className="container3">
+      <div className="contact-box1">
+        <div className="lefti"></div>
         <div className="right">
           <h2>Enroll Now</h2>
           <form>

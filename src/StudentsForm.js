@@ -38,12 +38,12 @@ function handleChange(e){
 }  
 
   return (
-    <div className="container">
-      <div className="contact-box">
-        <div className="left"></div>
-        <div className="right">
-          <h2>Enroll Now</h2>
-          <form>
+    <div className="containerr">
+		<div className="contact-boxx">
+			<div className="lefty"></div>
+			<div className="righty">
+				<h2>Enroll Now</h2>
+        <form>
             <input
               type='text'
               name='student_name'
@@ -82,9 +82,9 @@ function handleChange(e){
            ></input>
           <button className="btn2" onClick={handleSubmit}>Send</button>
           </form>
-        </div>
-      </div>
-	  </div>
+			</div>
+		</div>
+	</div>
   )
 }
 
