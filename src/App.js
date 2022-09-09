@@ -8,6 +8,7 @@ import Course from "./Course"
 import ContactUs from "./ContactUs"
 import NavBar from './NavBar';
 import Hero from './Hero';
+import CourseApplication from './CourseApplication';
 
 
 function App() {
@@ -15,14 +16,7 @@ function App() {
   
       <div>
       <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Hero />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/students" element={<Students />} />
-        <Route exact path="/teachers" element={<Teachers />} />
-        <Route exact path="/course" element={<Course />} />
-        <Route exact path="/contact-us" element={<ContactUs />} />    
-      </Routes>
+      <CourseApplication />
       </div>
 
   );

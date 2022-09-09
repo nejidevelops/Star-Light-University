@@ -1,6 +1,5 @@
-import { Box, FormControl, InputLabel, Button } from '@mui/material';
-import { Container } from '@mui/system';
 import React from 'react'
+import './CourseApplication.css';
 
 function CourseApplication() {
   return (
