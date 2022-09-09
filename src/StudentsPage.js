@@ -1,28 +1,21 @@
-import { Table, TableCell, TableRow, TableHead, TableBody, Button } from "@mui/material";
-import { useEffect, useState, React } from 'react';
+import React, { useEffect, useState } from 'react'
+import StudentsForm from './StudentsForm';
+import StudentsDetails from './StudentsDetails'
 
-const StudentsPage = () => {
-  const [students, setAllStudents] = useState([]);
+function StudentPage(){
+  const [allStudents, setAllStudents] = useState([])
 
-  const url = '/students'
+  useEffect(() => {
+    fetch('/students')
+    .then(r => r.json())
+    .then(data => setAllStudents(data))
+  }, []);
 
-  //custom hook
-  // function useFetchStudents()
+  // console.log(allTeachers)
 
-    //CRUD-GET
-    const getData = () => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data)
-          setAllStudents(data)
-        });
-    };
-    useEffect(() => {
-      getData()
-    }, []);
-
-  //DELETE
+  function handlePosting(data){
+    setAllStudents([...allStudents, data])
+  }
 
   function deleteStudent(id){
     fetch(`/students/${id}`,{
@@ -30,72 +23,28 @@ const StudentsPage = () => {
     })
     .then(r => r.json())
     .then(() => {
-        const filterCourse = students.filter((student) => student.id !== id)
-            setAllStudents(filterCourse)
+        const filterCourses = allStudents.filter((teacher) => teacher.id !== id)
+            setAllStudents(filterCourses)
         })
-  }
+    }
 
-  //POST
-
-
-  //Styling..
-  const tableStyle = {
-    width: "80%",
-    margin: "20px 10%"
-  }
-
-
+    function handleUpdateStudent(updatedStudent) {
+      const updatedStude = allStudents.map((student) => {
+        if (student.id === updatedStudent.id) {
+          return updatedStudent;
+        } else {
+          return student;
+        }
+      });
+      setAllStudents(updatedStudent);
+    }
 
   return (
     <div>
-    <Table style={tableStyle}>
-      <TableHead>
-        <TableRow style={{ fontSize: "18px" }}>
-          <TableCell>ID</TableCell>
-          <TableCell>Name</TableCell>
-          <TableCell>Email</TableCell>
-          <TableCell>Course-ID</TableCell>
-          <TableCell>Teacher-ID</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {students.map((student) => (
-          <TableRow key={student.id}>
-            <TableCell>{student.id}</TableCell>
-            <TableCell>{student.name}</TableCell>
-            <TableCell>{student.email}</TableCell>
-            <TableCell>{student.course_id}</TableCell>
-            <TableCell>{student.teacher_id}</TableCell>
-            <TableCell>
-            <Button
-                variant="contained"
-                color="secondary"
-                style={{ margin: "0px 20px" }}
-                onClick={() => {
-                  deleteStudent(student.id)
-                }
-                }
-              >
-                Edit
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                style={{ margin: "0px 20px" }}
-                onClick={() => {
-                  deleteStudent(student.id)
-                }
-                }
-              >
-                Delete
-              </Button>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+      <StudentsForm handlePosting={handlePosting} onUpdateTeach={handleUpdateStudent}/>
+      <StudentsDetails allStudents = {allStudents} deleteStudent={deleteStudent}/>
     </div>
-  );
-  }
+  )
+}
 
-export default StudentsPage
+export default StudentPage

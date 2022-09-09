@@ -10,7 +10,7 @@ import Paper from '@mui/material/Paper';
 import { useNavigate } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 
-function TeachersDetails({allStudents, deleteStudent}){
+function StudentsDetails({allStudents, deleteStudent}){
     
     const navigate = useNavigate();
 
@@ -102,4 +102,4 @@ function TeachersDetails({allStudents, deleteStudent}){
 
 
 
-export default TeachersDetails
+export default StudentsDetails
