@@ -57,11 +57,11 @@ function StudentsDetails({allStudents, deleteStudent}){
             >
               <StyledTableCell align="left">{student.id}</StyledTableCell>
               <StyledTableCell component="th" scope="row">
-                {student.name}
+                {student.student_name}
               </StyledTableCell>
-              <StyledTableCell align="right">{student.specialization}</StyledTableCell>
-              <StyledTableCell align="right">{student.home_address}</StyledTableCell>
-              <StyledTableCell align="right">{student.salary}</StyledTableCell>
+              <StyledTableCell align="right">{student.email}</StyledTableCell>
+              <StyledTableCell align="right">{student.course_id}</StyledTableCell>
+              <StyledTableCell align="right">{student.teacher_id}</StyledTableCell>
               <Box
                 m={1}
                 display="flex"

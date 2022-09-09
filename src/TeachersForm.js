@@ -1,18 +1,18 @@
 import React from 'react'
-import './Teachers.css'
+import './TeachersForm.css'
 import { useState } from 'react';
 
 function TeachersForm({handlePosting}){
   const [schoolData, setSchoolData] = useState({
     name: '',
     home_address: '',
-    specialization: '',
-    salary: '',
+    specialisation: '',
+    salary_receiving: '',
   })
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch(``,{
+    fetch(`http://localhost:9292/teachers`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -27,8 +27,8 @@ function TeachersForm({handlePosting}){
     setSchoolData({
         name: '',
         home_address: '',
-        specialization: '',
-        salary: '',
+        specialisation: '',
+        salary_receiving: '',
     })
 }
 
@@ -66,7 +66,7 @@ function handleChange(e){
                type='text'
                placeholder="Specialization"
                className='field'
-               value={schoolData.specialization}
+               value={schoolData.specialisation}
               onChange={handleChange}
             ></input>
            <input
@@ -74,7 +74,7 @@ function handleChange(e){
                required
                className='field'
                placeholder='Salary Received'
-               value={schoolData.salary}
+               value={schoolData.salary_receiving}
               onChange={handleChange}
            ></input>
           <button className="btn2" onClick={handleSubmit}>Send</button>

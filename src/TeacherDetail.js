@@ -41,7 +41,7 @@ function TeachersDetails({allTeachers, deleteTeacher}){
           <TableRow>
           <StyledTableCell>Teacher_id</StyledTableCell>
             <StyledTableCell>Teacher_Name</StyledTableCell>
-            <StyledTableCell align="right">Specialization</StyledTableCell>
+            <StyledTableCell align="right">Specialisation</StyledTableCell>
             <StyledTableCell align="right">Home_address</StyledTableCell>
             <StyledTableCell align="right">Salary&nbsp;($)</StyledTableCell>
             <StyledTableCell align="right">Edit_details</StyledTableCell>
@@ -59,9 +59,9 @@ function TeachersDetails({allTeachers, deleteTeacher}){
               <StyledTableCell component="th" scope="row">
                 {teacher.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{teacher.specialization}</StyledTableCell>
+              <StyledTableCell align="right">{teacher.specialisation}</StyledTableCell>
               <StyledTableCell align="right">{teacher.home_address}</StyledTableCell>
-              <StyledTableCell align="right">{teacher.salary}</StyledTableCell>
+              <StyledTableCell align="right">{teacher.salary_receiving}</StyledTableCell>
               <Box
                 m={1}
                 display="flex"

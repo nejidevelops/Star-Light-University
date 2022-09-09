@@ -7,8 +7,8 @@ function TeachersSpecific(){
     const [schoolData, setSchoolData] = useState({
         name: '',
         home_address: '',
-        specialization: '',
-        salary: '',
+        specialisation: '',
+        salary_receiving: '',
     })
 
 
@@ -27,7 +27,7 @@ function TeachersSpecific(){
     console.log(teacherDetails)
 
     function handleUpdateTeacher() {
-        fetch(`/teachers/${id}`, {
+        fetch(`http://localhost:9292/teachers/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function TeachersSpecific(){
             name: schoolData.name,
             street_address: schoolData.home_address,
             specialisation: schoolData.specialization,
-            salary: schoolData.salary,
+            salary_receiving: schoolData.salary,
         }),
       })
         .then((r) => r.json())
@@ -45,8 +45,8 @@ function TeachersSpecific(){
           setSchoolData({
             name: '',
             home_address: '',
-            specialization: '',
-            salary: '',
+            specialisation: '',
+            salary_receiving: '',
         })
           console.log(updatedItem)
         });
@@ -77,9 +77,9 @@ function TeachersSpecific(){
             ></input>
             <input
                type='text'
-               placeholder="Specialization"
+               placeholder="Specialisation"
                className='field'
-               value={schoolData.specialization}
+               value={schoolData.specialisation}
               onChange={handleChange}
             ></input>
            <input
@@ -87,7 +87,7 @@ function TeachersSpecific(){
                required
                className='field'
                placeholder='Salary Received'
-               value={schoolData.salary}
+               value={schoolData.salary_receiving}
               onChange={handleChange}
            ></input>
           <button className="btn2" onClick={handleUpdateTeacher}>Edit</button>

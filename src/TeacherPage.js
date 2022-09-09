@@ -6,12 +6,10 @@ const TeachersPage = () => {
   const [allTeachers, setAllTeachers] = useState([])
 
   useEffect(() => {
-    fetch('/teachers')
+    fetch('http://localhost:9292/teachers')
     .then(r => r.json())
     .then(data => setAllTeachers(data))
   }, []);
-
-  // console.log(allTeachers)
 
   function handlePosting(data){
     setAllTeachers([...allTeachers, data])
@@ -23,8 +21,8 @@ const TeachersPage = () => {
     })
     .then(r => r.json())
     .then(() => {
-        const filterCourses = allTeachers.filter((teacher) => teacher.id !== id)
-            setAllTeachers(filterCourses)
+        const goThru = allTeachers.filter((teacher) => teacher.id !== id)
+            setAllTeachers(goThru)
         })
     }
 

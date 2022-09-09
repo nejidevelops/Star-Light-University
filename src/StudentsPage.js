@@ -1,47 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import StudentsForm from './StudentsForm';
 import StudentsDetails from './StudentsDetails'
+import { useNavigate } from 'react-router-dom';
 
 function StudentPage(){
   const [allStudents, setAllStudents] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('/students')
+    fetch('http://localhost:9292/students')
     .then(r => r.json())
     .then(data => setAllStudents(data))
   }, []);
-
-  // console.log(allTeachers)
 
   function handlePosting(data){
     setAllStudents([...allStudents, data])
   }
 
   function deleteStudent(id){
-    fetch(`/students/${id}`,{
+    fetch(`http://localhost:9292/students/${id}`,{
         method: "DELETE",
     })
     .then(r => r.json())
     .then(() => {
-        const filterCourses = allStudents.filter((teacher) => teacher.id !== id)
-            setAllStudents(filterCourses)
+        const goThru = allStudents.filter((teacher) => teacher.id !== id)
+            setAllStudents(goThru)
         })
+    navigate("/")
     }
 
     function handleUpdateStudent(updatedStudent) {
-      const updatedStude = allStudents.map((student) => {
-        if (student.id === updatedStudent.id) {
-          return updatedStudent;
+      const updateStudent = allStudents.map((student) => {
+        if (student.id === updateStudent.id) {
+          return updateStudent;
         } else {
           return student;
         }
       });
-      setAllStudents(updatedStudent);
+      setAllStudents(updateStudent);
     }
 
   return (
     <div>
-      <StudentsForm handlePosting={handlePosting} onUpdateTeach={handleUpdateStudent}/>
+    
+      <StudentsForm handlePosting={handlePosting} onUpdateStudent={handleUpdateStudent}/>
       <StudentsDetails allStudents = {allStudents} deleteStudent={deleteStudent}/>
     </div>
   )

@@ -12,7 +12,7 @@ function CourseApplication({handlePosting}) {
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch(``,{
+    fetch(`http://localhost:9292/courses`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"

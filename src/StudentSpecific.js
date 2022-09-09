@@ -5,7 +5,7 @@ function StudentSpecific(){
     const { id } = useParams();
     const [studentDetails, setStudentDetails] = useState();
     const [schoolData, setSchoolData] = useState({
-        name: '',
+        student_name: '',
         email: '',
         teacher_id: '',
         course_id: '',
@@ -27,13 +27,13 @@ function StudentSpecific(){
     console.log(studentDetails)
 
     function handleUpdateStudent() {
-        fetch(`/students/${id}`, {
+        fetch(`http://localhost:9292/students/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            name: schoolData.name,
+            name: schoolData.student_name,
             street_address: schoolData.email,
             specialisation: schoolData.teacher_id,
             salary: schoolData.course_id,
@@ -43,7 +43,7 @@ function StudentSpecific(){
         .then((updatedItem) => {
           setStudentDetails(updatedItem)
           setSchoolData({
-            name: '',
+            student_name: '',
             email: '',
             teacher_id: '',
             course_id: '',
@@ -63,7 +63,7 @@ function StudentSpecific(){
               required
               className ="field"
               placeholder='Student Name'
-              value={schoolData.name}
+              value={schoolData.student_name}
               onChange={handleChange}
             ></input>
             <br />
