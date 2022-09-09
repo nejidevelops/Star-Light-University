@@ -1,4 +1,4 @@
-import { Box, FormControl, InputLabel } from '@mui/material';
+import { Box, FormControl, InputLabel, Button } from '@mui/material';
 import { Container } from '@mui/system';
 import React from 'react'
 
@@ -11,9 +11,21 @@ function CourseApplication() {
                 <div>
                     <FormControl>
                         <InputLabel>Course Name</InputLabel>
+                        <input name='coursename' />
+                    </FormControl>
+                    <FormControl>
+                        <InputLabel>Course Duration</InputLabel>
+                        <input name='courseperiod' />
+                    </FormControl>
+                    <FormControl>
+                        <InputLabel>Fees</InputLabel>
+                        <input name='fees' />
                     </FormControl>
                 </div>
             </Box>
+                    <FormControl>
+                        <Button type="submit">Submit</Button>
+                    </FormControl>
         </Container>
     </div>
   )
