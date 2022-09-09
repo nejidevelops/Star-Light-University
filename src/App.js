@@ -8,13 +8,14 @@ import ContactUs from "./ContactUs"
 import NavBar from './NavBar';
 import Hero from './Hero';
 import StudentsForm from './TeachersForm';
+import CoursePage from './CoursePage';
 
 function App() {
   return (
   
       <div>
       <NavBar />
-      <StudentsForm />
+      <CoursePage />
       </div>
 
   );
