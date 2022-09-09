@@ -9,13 +9,14 @@ import NavBar from './NavBar';
 import Hero from './Hero';
 import StudentsForm from './TeachersForm';
 import CoursePage from './CoursePage';
+import TeachersPage from './TeacherPage';
 
 function App() {
   return (
   
       <div>
       <NavBar />
-      <CoursePage />
+      <TeachersPage />
       </div>
 
   );
