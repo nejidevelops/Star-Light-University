@@ -46,6 +46,7 @@ function CourseApplication({handlePosting}) {
           <form>
             <input
               type='text'
+              name='course_name'
               required
               className ="field"
               placeholder='Course Name'
@@ -54,7 +55,8 @@ function CourseApplication({handlePosting}) {
             ></input>
             <br />
             <input
-              type='text'
+              type='number'
+              name='fees'
               required
               className='field'
               placeholder='Fees'
@@ -63,13 +65,15 @@ function CourseApplication({handlePosting}) {
             ></input>
             <input
                type='text'
+               name='department'
                placeholder="Department"
                className='field'
                value={schoolData.department}
               onChange={handleChange}
             ></input>
            <input
-               type='text'
+               type='number'
+               name='course_duration'
                required
                className='field'
                placeholder='Course Duration in Months'

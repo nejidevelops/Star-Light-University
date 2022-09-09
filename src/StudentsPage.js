@@ -26,7 +26,7 @@ function StudentPage(){
         const goThru = allStudents.filter((teacher) => teacher.id !== id)
             setAllStudents(goThru)
         })
-    navigate("/")
+    navigate("/students")
     }
 
     function handleUpdateStudent(updatedStudent) {

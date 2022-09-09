@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import CourseApplication from './CourseApplication';
 import CourseDetails from "./CourseDetailsPage";
 
 function CoursePage(){
     const [allCourses, setAllCourses] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
       fetch('http://localhost:9292/courses')
@@ -25,6 +27,7 @@ function CoursePage(){
           const filterCourses = allCourses.filter((course) => course.id !== id)
               setAllCourses(filterCourses)
           })
+      navigate('/courses');
     }
 
     function handleUpdateCourse(updateCourse) {
