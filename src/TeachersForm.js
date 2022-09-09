@@ -48,6 +48,7 @@ function handleChange(e){
             <input
               type='text'
               required
+              name='name'
               className ="field"
               placeholder='Teacher Name'
               value={schoolData.name}
@@ -57,6 +58,7 @@ function handleChange(e){
             <input
               type='text'
               required
+              name='home_address'
               className='field'
               placeholder='Home Address'
               value={schoolData.home_address}
@@ -64,6 +66,7 @@ function handleChange(e){
             ></input>
             <input
                type='text'
+               name='specialisation'
                placeholder="Specialization"
                className='field'
                value={schoolData.specialisation}
@@ -72,6 +75,7 @@ function handleChange(e){
            <input
                type='text'
                required
+               name='salary_receiving'
                className='field'
                placeholder='Salary Received'
                value={schoolData.salary_receiving}
