@@ -35,7 +35,7 @@ function TeachersSpecific(){
         body: JSON.stringify({
             name: schoolData.name,
             street_address: schoolData.home_address,
-            specialisation: schoolData.specialization,
+            specialisation: schoolData.specialisation,
             salary_receiving: schoolData.salary,
         }),
       })

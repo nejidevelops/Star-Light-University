@@ -24,10 +24,9 @@ function CoursePage(){
       })
       .then(r => r.json())
       .then(() => {
-          const filterCourses = allCourses.filter((course) => course.id !== id)
-              setAllCourses(filterCourses)
+          const goThru = allCourses.filter((course) => course.id !== id)
+              setAllCourses(goThru)
           })
-      navigate('/courses');
     }
 
     function handleUpdateCourse(updateCourse) {
