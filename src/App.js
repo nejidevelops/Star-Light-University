@@ -7,6 +7,7 @@ import ContactUs from "./ContactUs"
 import NavBar from './NavBar';
 import TeachersPage from './TeacherPage';
 import StudentPage from './StudentsPage';
+import Home from './Home';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <div>
       <NavBar />
       <Routes>
-        <Route exact path='/' element={<Hero />} />
+        <Route exact path='/' element={<Home />} />
         <Route exact path='/courses' element={<CoursePage />} />
         <Route exact path='/students' element={<StudentPage />} />
         <Route exact path='/teachers' element={<TeachersPage />} />

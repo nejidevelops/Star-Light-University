@@ -2,12 +2,13 @@ import React from "react";
 // import { useNavigate } from 'react-router-dom'
 import stude from "./images/pexels-filipe-sabino-2065490.jpg";
 import "./Hero.css"
+import About from "./About";
 import { Link } from "react-router-dom";
+import StudentsForm from "./StudentsForm";
 
 function Hero(){
     // const navigate = useNavigate();
     return(
-      <div>
         <div className='text-gray-700 flexthem'>
         <div className='hero-image w-full bg-center bg-cover bg-no-repeat h-96 -mt-[44px]'>
           <div className='mx-[4%] flex items-center justify-center h-96'>
@@ -32,9 +33,6 @@ function Hero(){
           </div>
         </div>
         </div>
-        <div className="">
-        </div>
-      </div>
     )
 }
 
