@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import "./StudentsForm.css"
 
 function StudentsForm({handlePosting}){
   const [schoolData, setSchoolData] = useState({
@@ -38,10 +39,10 @@ function handleChange(e){
 }  
 
   return (
-    <div className="containerr">
-		<div className="contact-boxx">
-			<div className="lefty"></div>
-			<div className="righty">
+    <div className="containerra">
+		<div className="contact-boxxx">
+			<div className="leftyy"></div>
+			<div className="rightyy">
 				<h2>Enroll Now</h2>
         <form>
             <input
