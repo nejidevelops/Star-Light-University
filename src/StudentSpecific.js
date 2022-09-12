@@ -27,7 +27,7 @@ function StudentSpecific(){
     console.log(studentDetails)
 
     function handleUpdateStudent() {
-        fetch(`http://localhost:9292/students/${id}`, {
+        fetch(`https://star-light-uni.herokuapp.com/students/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ function TeachersSpecific(){
     console.log(teacherDetails)
 
     function handleUpdateTeacher() {
-        fetch(`http://localhost:9292/teachers/${id}`, {
+        fetch(`https://star-light-uni.herokuapp.com/teachers/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

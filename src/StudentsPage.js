@@ -8,7 +8,7 @@ function StudentPage(){
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:9292/students')
+    fetch('https://star-light-uni.herokuapp.com/students')
     .then(r => r.json())
     .then(data => setAllStudents(data))
   }, []);
@@ -18,7 +18,7 @@ function StudentPage(){
   }
 
   function deleteStudent(id){
-    fetch(`http://localhost:9292/students/${id}`,{
+    fetch(`https://star-light-uni.herokuapp.com/students/${id}`,{
         method: "DELETE",
     })
     .then(r => r.json())

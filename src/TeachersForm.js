@@ -12,7 +12,7 @@ function TeachersForm({handlePosting}){
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch(`http://localhost:9292/teachers`,{
+    fetch(`https://star-light-uni.herokuapp.com/teachers`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
