@@ -14,7 +14,7 @@ function About(){
 					<p><em>“Your time is limited, so don't waste it living someone else's life.”– Steve Jobs</em></p>
                     <p>We work hard to make sure that we give the best to Our Students even after graduating for it is our duty to see you prosper.</p>
 					<div class="button">
-						<a href="">Read More</a>
+						<a href=" ">Read More</a>
 					</div>
 				</div>
 				<div class="social">

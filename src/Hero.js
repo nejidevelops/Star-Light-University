@@ -2,9 +2,8 @@ import React from "react";
 // import { useNavigate } from 'react-router-dom'
 import stude from "./images/pexels-filipe-sabino-2065490.jpg";
 import "./Hero.css"
-import About from "./About";
 import { Link } from "react-router-dom";
-import StudentsForm from "./StudentsForm";
+
 
 function Hero(){
     // const navigate = useNavigate();

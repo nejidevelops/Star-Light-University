@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import CourseApplication from './CourseApplication';
 import CourseDetails from "./CourseDetailsPage";
 
 function CoursePage(){
     const [allCourses, setAllCourses] = useState([])
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     useEffect(() => {
       fetch('https://star-light-uni.herokuapp.com/courses')

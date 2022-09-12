@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Hero from './Hero';
 import CoursePage from './CoursePage';
 import About from "./About"
 import ContactUs from "./ContactUs"
